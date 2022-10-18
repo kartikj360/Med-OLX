@@ -1,5 +1,5 @@
 import React from "react";
-
+import {Link} from 'react-router-dom'
 // import SearchIcon from '@mui/icons-material/Search';
 import SearchIcon from '@mui/icons-material/Search';
 // import SearchSharpIcon from '@mui/icons-material/SearchSharp';
@@ -27,11 +27,13 @@ function Header() {
           {/* <span className="header_option2">Cart</span> */}
         </div>
 
+        <Link to="home">
         <div className="header_options">
           <AccountCircleRoundedIcon color="action" className="header_loginicon" />
           <span className="header_option2">Sign in/Sign Up</span>
           {/* <span className="header_option2">Cart</span> */}
         </div>
+        </Link>
 
         <div className="header_options">
           <ShoppingCartRoundedIcon  color="action"  className="header_carticon" />

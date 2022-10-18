@@ -1,59 +1,28 @@
-// import logo from './logo.svg';  
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './App.css';
-import  Header from'./Header';
-import  Home from'./Home';
-//kartik dash h
+// import logo from './logo.svg';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import "./App.css";
+// import Hero from "./Hero"; 
+import Header from "./Header";
+import Home from "./Home";
+import Checkout from "./Checkout";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+// import { Route, Routes } from "react-router-dom";
+
+// import {BrowserRouter as Route }
+// from "react-router-dom";
 
 function App() {
   return (
     <div className="app">
-{/* 
-      <h1>Building up the  MedOLX store :) 
-      </h1> */}
-      <div className='pageWrapper'>
-      <Header />
-      <Home/> 
+      <Header/>
+        <Routes>
+        <Route path="/" element={ <Home/> } />
+        <Route path="/checkout" element={ <Checkout/> } />
+        </Routes>
       </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-      {/* <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header> */}
-    </div>
   );
 }
 
