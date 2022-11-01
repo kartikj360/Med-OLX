@@ -12,14 +12,13 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // import { Route, Routes } from "react-router-dom";
 
 // import {BrowserRouter as Route }
-// from "react-router-dom";
-
+// from "react-router-dom";   
 function App() {
   return (
     <div className="app">
       <Header/>
         <Routes>
-        <Route path="/" element={ <Home/> } />
+        <Route path="/home" element={ <Home/> } />
         <Route path="/checkout" element={ <Checkout/> } />
         </Routes>
       </div>

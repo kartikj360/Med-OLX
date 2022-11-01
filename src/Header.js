@@ -6,15 +6,22 @@ import SearchIcon from '@mui/icons-material/Search';
 import ShoppingCartRoundedIcon from '@mui/icons-material/ShoppingCartRounded';
 import ReceiptLongIcon from '@mui/icons-material/ReceiptLong';
 import AccountCircleRoundedIcon from '@mui/icons-material/AccountCircleRounded';
-
+// import Checkout from "./Checkout";
+// import Home from "./Home";
 import "./Header.css";
+import { useStateValue } from "./StateProvider";
 
   
 
 function Header() {
+
+  const[{basket},dispatch]= useStateValue();
+   
   return (
-    <div className="header">
-      <img className="header_logo" src="https://www.netmeds.com/assets/gloryweb/images/netmeds-new-logo.svg" />
+    <div className="header"> 
+      <Link to="/homecc">
+      <img className="header_logo" src="netmeds-new-logo.svg" alt="netmeds-new-logo "/>
+      </Link>
 
       <div className="header_search">
         <input className="header_input" type="text" />
@@ -27,20 +34,22 @@ function Header() {
           {/* <span className="header_option2">Cart</span> */}
         </div>
 
-        <Link to="home">
         <div className="header_options">
           <AccountCircleRoundedIcon color="action" className="header_loginicon" />
           <span className="header_option2">Sign in/Sign Up</span>
           {/* <span className="header_option2">Cart</span> */}
         </div>
-        </Link>
-
+        
+        <Link to="/checkout">
         <div className="header_options">
           <ShoppingCartRoundedIcon  color="action"  className="header_carticon" />
           <span className="header_option3">Cart</span>
-          <span className="header_cartcount">0</span>
+          <span className="header_cartcount">
+            {basket .length}
+          </span>
           {/* <span className="header_option2">Cart</span> */}
         </div>
+        </Link>
       </div>
     </div>
   );
