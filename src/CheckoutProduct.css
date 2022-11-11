@@ -1,0 +1,32 @@
+ .checkoutProduct{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+ }
+
+ .checkoutProduct_info{
+    padding-left: 20px;
+
+ }
+ 
+ .checkoutProduct_info>button{
+    background: black;
+    border: 1px solid;
+    margin-top: 10 px;
+    border-color: gainsboro;
+    color: blanchedalmond;
+    
+ }
+
+ .checkoutProduct_image{
+    object-fit: contain;
+    width: 180 px;
+    height: 180px;
+     
+ }
+
+.checkoutProduct_title{
+    font-size: 17px;
+    font-weight: 800;
+}

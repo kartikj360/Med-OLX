@@ -12,7 +12,7 @@ import "./Header.css";
 import { useStateValue } from "./StateProvider";
 
   
-
+ 
 function Header() {
 
   const[{basket},dispatch]= useStateValue();
@@ -28,11 +28,13 @@ function Header() {
         <SearchIcon color="action" className="header_searchIcon"/>
       </div>
       <div className="header_nav">
+        <Link to="/login">
         <div className="header_options">
           <ReceiptLongIcon  color="action" className="header_prescription"/>
           <span className="header_option1">Upload</span>
           {/* <span className="header_option2">Cart</span> */}
         </div>
+        </Link>
 
         <div className="header_options">
           <AccountCircleRoundedIcon color="action" className="header_loginicon" />
